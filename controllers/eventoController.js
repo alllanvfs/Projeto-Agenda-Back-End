@@ -1,26 +1,22 @@
 const Evento = require('../models/Evento');
-const logger = require('../logger'); // Importamos nosso logger
+const logger = require('../logger');
 
-// Criar um novo evento
+
 exports.criarEvento = async (req, res) => {
   try {
-    // A validação de campos obrigatórios é feita automaticamente pelo Mongoose
     const novoEvento = new Evento(req.body);
     await novoEvento.save();
     res.status(201).json({ message: "Evento criado com sucesso!", data: novoEvento });
   } catch (error) {
-    // Se ocorrer um erro (ex: campo obrigatório faltando), ele será capturado aqui
     logger.error({
       message: `Erro ao criar evento: ${error.message}`,
       stack: error.stack,
       body: req.body
     });
-    // Retorna uma resposta de erro para o cliente
     res.status(400).json({ message: "Erro ao criar evento.", error: error.message });
   }
 };
 
-// Buscar eventos (ex: por calendário)
 exports.buscarEventos = async (req, res) => {
     try {
         const { calendarioId } = req.query;
@@ -35,7 +31,6 @@ exports.buscarEventos = async (req, res) => {
     }
 };
 
-// Deletar um evento
 exports.deletarEvento = async (req, res) => {
     try {
         const evento = await Evento.findByIdAndDelete(req.params.id);

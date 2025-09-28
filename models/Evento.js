@@ -7,6 +7,6 @@ const EventoSchema = new mongoose.Schema({
     dataFim: { type: Date, required: [true, 'A data de término é obrigatória.'] },
     local: { type: String },
     calendarioId: { type: mongoose.Schema.Types.ObjectId, ref: 'Calendario', required: true }
-}, { timestamps: true }); // Adiciona createdAt e updatedAt automaticamente
+}, { timestamps: true });
 
 module.exports = mongoose.model('Evento', EventoSchema);
