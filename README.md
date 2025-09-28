@@ -5,7 +5,7 @@ API RESTful para gerenciamento de eventos, desenvolvida para a disciplina de Pro
 ## Desenvolvedores
 
 - **Nome:** `Allan Vinicios Ferraz Santos`
-- **Nome:** `[Nome do Aluno 2]`
+- **Nome:** `Luhan Christyan Rodrigues`
 
 ## Tecnologias
 
