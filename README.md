@@ -1,11 +1,20 @@
-# Projeto: API de Agenda Eletrônica
 
-API RESTful para gerenciamento de eventos, desenvolvida para a disciplina de Programação Web Back-End.
 
-## Desenvolvedores
+# 𝓟𝓻𝓸𝓳𝓮𝓽𝓸 𝓭𝓮 𝓟𝓻𝓸𝓰𝓻𝓪𝓶𝓪çã𝓸 𝔀𝓮𝓫 𝓫𝓪𝓬𝓴-𝓮𝓷𝓭
 
-- **Nome:** `Allan Vinicios Ferraz Santos`
-- **Nome:** `Luhan Christyan Rodrigues`
+Titulo do projeto:  API de Agenda Eletrônica
+
+
+
+| ID   |                                 Equipe                                    |   RA       | 
+| :--: | :-----------------------------------------------------------------------: | :--------: |
+|   01 |             Allan Vinicios Ferraz Santos                               |  2313189   |    
+|   02 |           Luhan Christyan Rodrigues                                 |  2453630   |   
+
+
+#Descrição do projeto 
+
+
 
 ## Tecnologias
 
