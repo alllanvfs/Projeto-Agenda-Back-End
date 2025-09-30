@@ -2,7 +2,7 @@
  
 API RESTful para gerenciamento de eventos, desenvolvida para a disciplina de Programação Web Back-End.
 
-![Banner do Projeto](agenda1.jpeg)
+![Banner do Projeto](agenda1.png)
 
 👨‍💻 𝓓𝓮𝓼𝓮𝓷𝓿𝓸𝓵𝓿𝓮𝓭𝓸𝓻𝓮𝓼 𝓭𝓸 𝓟𝓻𝓸𝓳𝓮𝓽𝓸
 
