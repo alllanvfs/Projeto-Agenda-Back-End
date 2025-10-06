@@ -8,7 +8,7 @@ API RESTful para gerenciamento de eventos, desenvolvida para a disciplina de Pro
 
 | ID   |                                 Equipe                                    |   RA       | 
 | :--: | :-----------------------------------------------------------------------: | :--------: |
-|   01 |            Allan Vinicios Ferraz Santos                            |  2313189   |    
+|   01 |            Allan Vinicios Ferraz Santos                            |  2465272   |    
 |   02 |           Luhan Christyan Rodrigues                                    |  2453630   |   
 
 
