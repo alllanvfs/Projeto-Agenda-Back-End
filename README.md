@@ -33,3 +33,23 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
     - **Deletar:** Remove um evento do banco de dados.
 - **Validação de Dados:** O sistema impede a criação de registros com campos obrigatórios faltando.
 - **Log de Erros:** Qualquer falha durante as operações de banco de dados é capturada e salva no arquivo `/logs/exceptions.log`.
+
+## Como Executar o Projeto
+
+### Pré-requisitos
+- Node.js instalado.
+- MongoDB Server instalado e rodando na sua máquina.
+
+### Passos
+
+1.  **Instale as dependências** do projeto (Mongoose e prompt-sync):
+    ```bash
+    npm install
+    ```
+
+2.  **Execute a aplicação** através do terminal:
+    ```bash
+    node index.js
+    ```
+
+3.  Após a execução, o terminal exibirá o menu principal. Basta digitar o número da opção desejada e pressionar Enter para interagir com a agenda.
