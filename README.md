@@ -49,7 +49,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 2.  **Execute a aplicação** através do terminal:
     ```bash
-    node index.js
+    node app.js
     ```
 
 3.  Após a execução, o terminal exibirá o menu principal. Basta digitar o número da opção desejada e pressionar Enter para interagir com a agenda.
