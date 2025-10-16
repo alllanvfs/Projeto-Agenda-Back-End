@@ -4,12 +4,19 @@ Aplicação de console interativa para gerenciamento de eventos, desenvolvida pa
 
 O projeto cumpre com todos os requisitos solicitados: classes com CRUD, arquivo de banco de dados, classe de log, validações e um arquivo principal que executa a aplicação.
 
-## Desenvolvedores
+![Banner do Projeto](agenda.PNG)
 
-- **Nome:** `Allan Vinicios Ferraz Santos - 2465272` 
-- **Nome:** `Luhan Christyan Rodrigues - 2453630`
+👨‍💻 𝓓𝓮𝓼𝓮𝓷𝓿𝓸𝓵𝓿𝓮𝓭𝓸𝓻𝓮𝓼 𝓭𝓸 𝓟𝓻𝓸𝓳𝓮𝓽𝓸
 
-## Tecnologias Utilizadas
+| ID   |                                 Equipe                                    |   RA       | 
+| :--: | :-----------------------------------------------------------------------: | :--------: |
+|   01 |            Allan Vinicios Ferraz Santos                            |  2465272   |    
+|   02 |           Luhan Christyan Rodrigues                                    |  2453630   |   
+
+
+🚀 𝓣𝓮𝓬𝓷𝓸𝓵𝓸𝓰𝓲𝓪𝓼 𝓾𝓽𝓲𝓵𝓲𝔃𝓪𝓭𝓪𝓼
+
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - **Node.js**: Ambiente de execução do código.
 - **MongoDB**: Banco de dados NoSQL para armazenamento dos dados.
