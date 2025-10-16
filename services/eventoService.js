@@ -2,10 +2,10 @@ const Evento = require('../models/Evento');
 const Logger = require('../Logger');
 
 class EventoService {
-  // CREATE
+
   static async create(data) {
     try {
-      // A validação de campos obrigatórios acontece aqui, graças ao Mongoose
+
       const novoEvento = new Evento(data);
       await novoEvento.save();
       console.log('Evento criado com sucesso!');
@@ -13,12 +13,11 @@ class EventoService {
     } catch (error) {
       console.error(`Falha ao criar evento: ${error.message}`);
       Logger.logError(`Erro ao criar evento: ${error.message}`);
-      // A validação de campos obrigatórios será registrada no log
+
       return null;
     }
   }
 
-  // READ (Ler um por ID)
   static async getById(id) {
     try {
       return await Evento.findById(id);
@@ -28,7 +27,6 @@ class EventoService {
     }
   }
   
-  // READ (Ler todos)
   static async getAll() {
     try {
       return await Evento.find({});
@@ -38,10 +36,9 @@ class EventoService {
     }
   }
 
-  // UPDATE
   static async update(id, data) {
     try {
-      // { new: true } garante que o método retorne o documento atualizado
+
       const evento = await Evento.findByIdAndUpdate(id, data, { new: true, runValidators: true });
       if (!evento) {
         console.log(`Evento com ID ${id} não encontrado para atualização.`);
@@ -56,7 +53,6 @@ class EventoService {
     }
   }
 
-  // DELETE
   static async delete(id) {
     try {
       const result = await Evento.findByIdAndDelete(id);

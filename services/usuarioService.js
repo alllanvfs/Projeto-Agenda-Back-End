@@ -2,7 +2,7 @@ const Usuario = require('../models/Usuario');
 const Logger = require('../Logger');
 
 class UsuarioService {
-  // CREATE
+
   static async create(data) {
     try {
       const novoUsuario = new Usuario(data);
@@ -16,7 +16,6 @@ class UsuarioService {
     }
   }
 
-  // READ (Ler um por ID)
   static async getById(id) {
     try {
       return await Usuario.findById(id);
@@ -26,7 +25,6 @@ class UsuarioService {
     }
   }
   
-  // READ (Ler todos)
   static async getAll() {
     try {
       return await Usuario.find({});
@@ -36,7 +34,6 @@ class UsuarioService {
     }
   }
 
-  // UPDATE
   static async update(id, data) {
     try {
       const usuario = await Usuario.findByIdAndUpdate(id, data, { new: true, runValidators: true });
@@ -53,7 +50,6 @@ class UsuarioService {
     }
   }
 
-  // DELETE
   static async delete(id) {
     try {
       const result = await Usuario.findByIdAndDelete(id);

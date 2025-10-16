@@ -2,7 +2,7 @@ const Calendario = require('../models/Calendario');
 const Logger = require('../Logger');
 
 class CalendarioService {
-  // CREATE
+
   static async create(data) {
     try {
       const novoCalendario = new Calendario(data);
@@ -16,7 +16,6 @@ class CalendarioService {
     }
   }
 
-  // READ (Ler um por ID)
   static async getById(id) {
     try {
       return await Calendario.findById(id);
@@ -26,7 +25,6 @@ class CalendarioService {
     }
   }
   
-  // READ (Ler todos)
   static async getAll() {
     try {
       return await Calendario.find({});
@@ -36,7 +34,6 @@ class CalendarioService {
     }
   }
 
-  // UPDATE
   static async update(id, data) {
     try {
       const calendario = await Calendario.findByIdAndUpdate(id, data, { new: true, runValidators: true });
@@ -53,7 +50,6 @@ class CalendarioService {
     }
   }
 
-  // DELETE
   static async delete(id) {
     try {
       const result = await Calendario.findByIdAndDelete(id);
