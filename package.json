@@ -10,8 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0",
     "mongoose": "^8.18.2",
+    "prompt-sync": "^4.2.0",
     "winston": "^3.17.0"
   }
 }
