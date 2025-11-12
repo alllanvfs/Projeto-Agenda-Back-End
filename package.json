@@ -10,6 +10,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
     "mongoose": "^8.18.2",
     "prompt-sync": "^4.2.0",
     "winston": "^3.17.0"
