@@ -6,14 +6,14 @@ Esta versão evolui o Projeto 1, transformando a aplicação de console em uma *
 
 ![Banner do Projeto](agenda.PNG)
 
-👨‍💻 𝓓𝓮𝓼𝓮𝓷𝓿𝓸𝓵𝓿varepsilon𝓭𝓸𝓻𝓮𝓼 𝓭𝓸 𝓟𝓻𝓸𝓳varepsilon𝓽𝓸
+👨‍💻 𝓓𝓮𝓼𝓮𝓷𝓿𝓸𝓵𝓿𝓭𝓸𝓻𝓮𝓼 𝓭𝓸 𝓟𝓻𝓸𝓳e𝓽𝓸
 
 | ID | Equipe | RA |
 | :--: | :-----------------------------------------------------------------------: | :--------: |
 | 01 | Allan Vinicios Ferraz Santos | 2465272 |
 | 02 | Luhan Christyan Rodrigues | 2453630 |
 
-🚀 𝓣varepsilon𝓬𝓷𝓸𝓵𝓸𝓰𝓲𝓪𝓼 𝓾𝓽𝓲𝓵𝓲𝔃𝓪𝓭𝓪𝓼
+🚀 𝓣e𝓬𝓷𝓸𝓵𝓸𝓰𝓲𝓪𝓼 𝓾𝓽𝓲𝓵𝓲𝔃𝓪𝓭𝓪𝓼
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
