@@ -1,55 +1,166 @@
-# Projeto: Aplicação de Console - Agenda Eletrônica
+# Projeto 2: API de Agenda Eletrônica (com Login)
 
-Aplicação de console interativa para gerenciamento de eventos, desenvolvida para a disciplina de Programação Web Back-End.
+API RESTful desenvolvida para a disciplina de Programação Web Back-End (Projeto 2).
 
-O projeto cumpre com todos os requisitos solicitados: classes com CRUD, arquivo de banco de dados, classe de log, validações e um arquivo principal que executa a aplicação.
+Esta versão evolui o Projeto 1, transformando a aplicação de console em uma **API web segura** construída com Node.js e Express. O foco principal é a implementação de um sistema de autenticação completo, utilizando **sessões** e **criptografia de senhas** para proteger as rotas de acesso aos dados.
 
 ![Banner do Projeto](agenda.PNG)
 
-👨‍💻 𝓓𝓮𝓼𝓮𝓷𝓿𝓸𝓵𝓿𝓮𝓭𝓸𝓻𝓮𝓼 𝓭𝓸 𝓟𝓻𝓸𝓳𝓮𝓽𝓸
+👨‍💻 𝓓𝓮𝓼𝓮𝓷𝓿𝓸𝓵𝓿varepsilon𝓭𝓸𝓻𝓮𝓼 𝓭𝓸 𝓟𝓻𝓸𝓳varepsilon𝓽𝓸
 
-| ID   |                                 Equipe                                    |   RA       | 
+| ID | Equipe | RA |
 | :--: | :-----------------------------------------------------------------------: | :--------: |
-|   01 |            Allan Vinicios Ferraz Santos                            |  2465272   |    
-|   02 |           Luhan Christyan Rodrigues                                    |  2453630   |   
+| 01 | Allan Vinicios Ferraz Santos | 2465272 |
+| 02 | Luhan Christyan Rodrigues | 2453630 |
 
-
-🚀 𝓣𝓮𝓬𝓷𝓸𝓵𝓸𝓰𝓲𝓪𝓼 𝓾𝓽𝓲𝓵𝓲𝔃𝓪𝓭𝓪𝓼
+🚀 𝓣varepsilon𝓬𝓷𝓸𝓵𝓸𝓰𝓲𝓪𝓼 𝓾𝓽𝓲𝓵𝓲𝔃𝓪𝓭𝓪𝓼
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - **Node.js**: Ambiente de execução do código.
+- **Express.js**: Framework para a construção do servidor e das rotas da API.
 - **MongoDB**: Banco de dados NoSQL para armazenamento dos dados.
 - **Mongoose**: Biblioteca para modelagem e comunicação com o MongoDB.
-- **prompt-sync**: Biblioteca para permitir a interação com o usuário no terminal.
+- **express-session**: Biblioteca para gerenciamento de sessões, permitindo o login.
+- **bcrypt**: Biblioteca para criptografia segura das senhas dos usuários.
 
-## Funcionalidades
+## Como Executar e Testar o Projeto (Passo a Passo)
 
-- **Menu Interativo:** Permite que o usuário escolha as ações que deseja realizar.
-- **CRUD de Eventos:**
-    - **Listar:** Visualiza todos os eventos salvos no banco de dados.
-    - **Adicionar:** Cria um novo evento de forma interativa, selecionando um calendário existente.
-    - **Modificar:** Altera informações de um evento existente através de seu ID.
-    - **Deletar:** Remove um evento do banco de dados.
-- **Validação de Dados:** O sistema impede a criação de registros com campos obrigatórios faltando.
-- **Log de Erros:** Qualquer falha durante as operações de banco de dados é capturada e salva no arquivo `/logs/exceptions.log`.
+Siga este guia para configurar e testar a API. O servidor **não possui interface gráfica** (views) e deve ser testado através de uma ferramenta como o Postman.
 
-## Como Executar o Projeto
+---
 
-### Pré-requisitos
+### Passo 1: Pré-requisitos
+
 - Node.js instalado.
-- MongoDB Server instalado e rodando na sua máquina.
+- MongoDB Server instalado e rodando localmente (na porta padrão `27017`).
 
-### Passos
+---
 
-1.  **Instale as dependências** do projeto (Mongoose e prompt-sync):
+### Passo 2: Instalação
+
+1.  **Clone o repositório** para a sua máquina local.
+2.  Abra um terminal na pasta do projeto.
+3.  **Instale as dependências** do projeto (Express, Mongoose, bcrypt, etc):
     ```bash
     npm install
     ```
 
-2.  **Execute a aplicação** através do terminal:
+---
+
+### Passo 3: Iniciar o Servidor
+
+1.  No seu terminal, execute o comando para iniciar a API:
     ```bash
     node app.js
     ```
+2.  O terminal deve exibir as seguintes mensagens. **Mantenha este terminal rodando** durante todos os testes.
+    ```
+    Servidor rodando na porta 3000
+    API pronta para uso em http://localhost:3000
+    Conectado ao MongoDB com sucesso!
+    ```
 
-3.  Após a execução, o terminal exibirá o menu principal. Basta digitar o número da opção desejada e pressionar Enter para interagir com a agenda.
+---
+
+### Passo 4: Testar a Proteção (Postman) 🚫
+
+Vamos provar que a rota de eventos está segura.
+
+- **Ferramenta:** Postman
+- **Método:** `GET`
+- **URL:** `http://localhost:3000/api/eventos`
+- **Resultado Esperado:** Um erro **`401 Unauthorized`** com a mensagem:
+  ```json
+  {
+    "message": "Acesso não autorizado. Por favor, faça login."
+  }
+
+---
+
+### Passo 5: Registrar um Usuário (Postman) 📝
+
+* **Método:** `POST`
+* **URL:** `http://localhost:3000/auth/register`
+* **Body (raw/JSON):**
+    ```json
+    {
+      "nome": "Seu Nome de Teste",
+      "email": "teste@email.com",
+      "password": "123"
+    }
+    ```
+* **Resultado Esperado:** `201 Created` com a mensagem:
+    ```json
+    {
+      "message": "Usuário registrado com sucesso!",
+      "userId": "..."
+    }
+    ```
+
+---
+
+### Passo 6: Fazer Login (Postman) 🔑
+
+Isso irá criar sua sessão. O Postman gerencia o cookie automaticamente.
+
+* **Método:** `POST`
+* **URL:** `http://localhost:3000/auth/login`
+* **Body (raw/JSON):**
+    ```json
+    {
+      "email": "teste@email.com",
+      "password": "123"
+    }
+    ```
+* **Resultado Esperado:** `200 OK` com a mensagem:
+    ```json
+    {
+      "message": "Login realizado com sucesso!"
+    }
+    ```
+
+---
+
+### Passo 7: Testar a Rota Protegida (com Login) ✅
+
+Agora que você está logado no Postman, repita o Passo 4.
+
+* **Método:** `GET`
+* **URL:** `http://localhost:3000/api/eventos`
+* **Resultado Esperado:** `200 OK` com a lista de eventos (provavelmente uma lista vazia `[]`). Isso prova que seu login funcionou.
+
+---
+
+### Passo 8: Criar um Evento (Postman) ➕
+
+Vamos testar a criação de um novo dado, que também é uma rota protegida.
+
+* **Método:** `POST`
+* **URL:** `http://localhost:3000/api/eventos`
+* **Body (raw/JSON):** (Lembre-se de usar um `calendarioId` válido do seu banco de dados)
+    ```json
+    {
+      "titulo": "Meu Evento pela API",
+      "dataInicio": "2025-11-20T10:00:00Z",
+      "dataFim": "2025-11-20T11:00:00Z",
+      "calendarioId": "68f17be8890ecb04a833cd21"
+    }
+    ```
+* **Resultado Esperado:** `201 Created` com os dados do evento que acabou de ser criado.
+
+---
+
+## Resumo dos Endpoints da API
+
+### Autenticação (`/auth`)
+
+* `POST /auth/register`: Cria um novo usuário.
+* `POST /auth/login`: Inicia uma sessão (loga o usuário).
+* `POST /auth/logout`: Encerra a sessão.
+
+### Eventos (`/api/eventos`) - (Requer Login)
+
+* `GET /`: Lista todos os eventos.
+* `POST /`: Cria um novo evento.
+* `DELETE /:id`: Deleta um evento.
